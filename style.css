@@ -59,7 +59,7 @@ body {
   bottom: 0;
   opacity: 1;
   z-index: -1;
-  background: url("https://raw.githubusercontent.com/manishbarui/SBI-CREDIT-CARD/refs/heads/main/sbi.png") center / cover no-repeat;
+  background: url("https://raw.githubusercontent.com/manishbarui/SBI-CREDIT-CARD/refs/heads/main/bg.jpg") center / cover no-repeat;
 }
 
 .brand {
