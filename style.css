@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.card-wrapper {
+  width: 410px;
+  height: 230px;
+  min-width: 410px;
+  perspective: 1000px;
+  font-family: 'Baloo Bhai 2';
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  color: rgb(245, 245, 245);
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  display: grid;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.front {
+  gap: 10px;
+  line-height: 1;
+  align-items: center;
+  padding: 10px 15px 10px;
+  justify-content: space-between;
+  grid-template-rows: repeat(2, auto) 1fr repeat(2, auto);
+  grid-template-areas: "text brand" "chip contactless" "number number" "btn valid" "name type";
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: -1;
+  background: url("https://raw.githubusercontent.com/manishbarui/SBI-CREDIT-CARD/refs/heads/main/sbi.png") center / cover no-repeat;
+}
+
+.brand {
+  width: 60px;
+  height: 25px;
+  justify-self: end;
+  margin-bottom: 10px;
+  background: url("https://raw.githubusercontent.com/manishbarui/SBI-CREDIT-CARD/refs/heads/main/sbi.png") center / contain no-repeat;
+}
+
+.chip {
+  width: 50px;
+  grid-area: chip;
+  margin-left: 15px;
+}
+
+.contactless-icon {
+  width: 50px;
+  height: 35px;
+  justify-self: end;
+  margin-right: 15px;
+  grid-area: contactless;
+  background: url("https://raw.githubusercontent.com/manishbarui/SBI-CREDIT-CARD/refs/heads/main/contactless.png") center / contain no-repeat;
+}
+
+.card-number {
+  font-size: 25px;
+  grid-area: number;
+  color: #e8e8e8;
+  margin-left: 15px;
+  letter-spacing: 3px;
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+.show-cvv,
+.hide-cvv {
+  border: none;
+  grid-area: btn;
+  color: white;
+  line-height: 2;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0px 15px;
+  border-radius: 5px;
+  width: max-content;
+  font-family: "Baloo Bhai 2";
+  backdrop-filter: blur(10px);
+  background-color: #0000006b;
+}
+
+.card-validity {
+  grid-area: valid;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.validity-text {
+  font-size: 8px;
+  width: min-content;
+}
+
+.valid-date {
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.person-name {
+  grid-area: name;
+  letter-spacing: 2px;
+  padding: 0 15px;
+}
+
+.upi-icon {
+  width: 100px;
+  height: 30px;
+  grid-area: type;
+  justify-self: flex-end;
+  background: url("https://raw.githubusercontent.com/manishbarui/SBI-CREDIT-CARD/refs/heads/main/RuPay.png") center / contain no-repeat;
+}
+
+.back {
+  background-color: #050505;
+  transform: rotateY(180deg);
+  grid-template-rows: repeat(4, auto)1fr auto;
+  grid-template-areas: "text text" "stripe stripe" "sc sc" "btn dummy" "brand dummy" "contact contact";
+}
+
+.back .bg {
+  opacity: 0.5;
+}
+
+.show-backside {
+  transform: rotateY(-180deg);
+}
+
+.text {
+  display: flex;
+  padding: 0 12px;
+  font-size: 10px;
+  grid-area: text;
+  color: #ffffffba;
+  justify-content: space-between;
+}
+
+.mag-stripe {
+  width: 100%;
+  height: 50px;
+  grid-area: stripe;
+  background-color: #000;
+}
+
+.sign-n-cvv {
+  display: flex;
+  width: 100%;
+  grid-area: sc;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.signature {
+  width: 100%;
+  background-image: repeating-linear-gradient(320deg, #e7e7e7 -2px, #e7e7e7 3px, #cccccc 0px, #cccccc 8px);
+}
+
+.cvv {
+  height: 40px;
+  color: black;
+  padding: 10px 12px;
+  font-style: italic;
+  letter-spacing: 2px;
+  background: white;
+}
+
+.dummy-text {
+  grid-area: dummy;
+  font-size: 8px;
+  color: #ffffff69;
+}
+
+.hide-cvv {
+  margin: 0 10px;
+  background-color: #0000008f;
+  border: 1px solid #ffffff1f;
+}
+
+.back .brand {
+  margin: 10px 15px 0;
+  justify-self: self-start;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #ffffff91;
+  padding: 2px 10px;
+  grid-area: contact;
+  letter-spacing: 1.5px;
+} 
