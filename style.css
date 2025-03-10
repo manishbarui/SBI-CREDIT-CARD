@@ -18,8 +18,6 @@ body {
   min-width: 410px;
   perspective: 1000px;
   font-family: 'Baloo Bhai 2';
-  border-radius: 15px;
-  overflow: hidden;
 }
 
 .card {
