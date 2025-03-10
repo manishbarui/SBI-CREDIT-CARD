@@ -12,13 +12,18 @@ body {
   background: #000000;
 }
 
-.card-wrapper {
-  width: 410px;
-  height: 230px;
-  min-width: 410px;
-  perspective: 1000px;
-  font-family: 'Baloo Bhai 2';
-}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: -1;
+  border-radius: 15px;
+  margin: 5px;
+  background: url("https://raw.githubusercontent.com/manishbarui/SBI-CREDIT-CARD/refs/heads/main/bg.jpg") center / cover no-repeat;
+} 
 
 .card {
   width: 100%;
