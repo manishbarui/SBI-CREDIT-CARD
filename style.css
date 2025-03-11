@@ -9,13 +9,13 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #000000;
+  background: #ffffff; /* Changed from black (#000000) to white (#ffffff) */
 }
 
 .card-wrapper {
   width: 400px;
   height: 260px;
-  min-width: 40ppx;
+  min-width: 40px;
   perspective: 1000px;
   font-family: 'Baloo Bhai 2';
 }
